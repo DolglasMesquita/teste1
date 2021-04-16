@@ -12,3 +12,37 @@ with open("tabela.csv", 'w', newline='') as arquivo:
 
 arquivo.close()
 
+while True:
+    print("Escolha uma opção:")
+    print("1 - listar | 2 - incluir | 3 - excluir")
+
+    opcao = int(input("Opção: "))
+
+    if(opcao == 1):
+        with open("tabela.csv") as arquivo:
+            lista = csv.reader(arquivo)
+
+            for linha in lista:
+                print(linha)
+            print("\n")
+
+
+    if(opcao == 2):
+        id = input("Id: ")
+        nome = input("Nome: ")
+        salario = input("Salário: ")
+
+        with open("tabela.csv", 'a', newline='') as arquivo:
+            incluir = csv.writer(arquivo)
+            incluir.writerow([id, nome, salario])
+            print("\n")
+        arquivo.close()
+
+    if(opcao == 3):
+        with open("tabela.csv", 'w', newline='') as arquivo:
+            escrever = csv.writer(arquivo)
+            escrever.writerow(["id", "nome", "salario"])
+        arquivo.close()
+
+    
+
