@@ -7,7 +7,8 @@ with open("tabela.csv", 'w', newline='') as arquivo:
     escrever.writerow(["id", "nome", "salario"])
     escrever.writerow(["1", "fulano", "1000.00"])
     escrever.writerow(["2", "beltrano", "2000.00"])
-
+    escrever.writerow(["3", "andre", "1500.00"])
+    escrever.writerow(["4", "renato", "10.50"])
 
 arquivo.close()
 
